@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<!-- LightSquid TPL v1.7 -->
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Lightsquid interface</title>
+  ##META##
+  <link rel="stylesheet" href="tpl/base/css/bootstrap.min.css">
+  <style>
+    body {
+      padding-top: 60px;
+      padding-bottom: 40px;
+    }
+  </style>
+  <link rel="stylesheet" href="tpl/base/css/bootstrap-responsive.min.css">
+  <link rel="stylesheet" href="tpl/base/css/main.css">
+  <script src="tpl/base/js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
+</head>
+<body>
+  <div class="navbar navbar-inverse navbar-fixed-top">
+    <div class="navbar-inner">
+      <div class="container">
+        <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </a>
+        <a class="brand" href="index.cgi">##MSG_USER##: ##USER##</a>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+  <div class="row">
+    <div class="span12">
+      <table class="table table-striped">
+      <tbody>
+        <tr>
+          <td>##MSG_WORK_PERIOD##:</td>
+          <td><b>##WORKPERIOD##</b></td>
+        </tr>
+	       <tr>
+          <td>##MSG_TOTAL##:</TD>
+          <td>&nbsp;<b>##TOTALBYTES##</b></td>
+	       </tr>
+         <tr>
+<!-- HIDE graphreport start-->
+        <td>User graph: </td><td align="center" colspan="2"><A HREF="##GRAPHURL_L##"><img src="get.cgi?png=graph" border="0" title="Graph Report">
+<!-- HIDE graphreport end-->
+        </tr>
+      </tbody>
+  </table>
+      <table class="table table-striped">
+      <tbody>
+        <tr>
+          <td>##MSG_DATE##</th>
+          <th>##MSG_BYTES##</th>
+          <th>##MSG_WEEKSUM##</th>
+          <th>##MSG_CUMULATIVE##</th>
+        </tr>
+	<!-- [[ day start-->
+        <tr ##DAYATTR##>
+          <td><A HREF="##DAYDATE_L##">##DAYDATE_B##</A></TD>
+          <td>##DAYBYTES##</TD>
+          <td>##WEEKSUM##</td>
+          <td>##DAYCUMULATIVE##</td>
+        </TR>
+	<!-- ]] day end-->
+
+        <tr>
+          <td>##MSG_TOTAL##</TD>
+          <td>##TOTALBYTES##</TD>
+          <td>&nbsp</td>
+          <td>&nbsp</td>
+        </tr>
+
+      </tbody>
+    </table>
+  </div>
+  </div>
+  </div>
+    <hr>
+    ##COPYRIGHT##
+    <div align="center"><a href="http://www.hipernetworks.net" target="_blank">Template by hipernetworks</a></div>
+</body>
+</html>

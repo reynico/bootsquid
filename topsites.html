@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<!-- LightSquid TPL v1.7 -->
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Lightsquid interface</title>
+  ##META##
+  <link rel="stylesheet" href="tpl/base/css/bootstrap.min.css">
+  <style>
+    body {
+      padding-top: 60px;
+      padding-bottom: 40px;
+    }
+  </style>
+  <link rel="stylesheet" href="tpl/base/css/bootstrap-responsive.min.css">
+  <link rel="stylesheet" href="tpl/base/css/main.css">
+  <script src="tpl/base/js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
+</head>
+<body>
+  <div class="navbar navbar-inverse navbar-fixed-top">
+    <div class="navbar-inner">
+      <div class="container">
+        <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </a>
+        <a class="brand" href="index.cgi">##MSG_TOP_SITES##</a>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+  <div class="row">
+    <div class="span12">
+    <table class="table table-striped">
+      <tbody>
+      <!-- VARIABLE selectedattr bgcolor="#FFD700" -->
+      <tr>
+          <th></th>
+          <th></th>
+          <th>##MSG_ACCESSED_SITE##</th>
+          <th ##SORTCONNECTATTR##><A HREF="##SORTCONNECTURL_L##">##SORTCONNECTURL_B##</A></th>
+          <th ##SORTBYTESATTR##><A HREF="##SORTBYTESURL_L##">##SORTBYTESURL_B##</A></th>
+          <th>%</th>
+        </tr>
+	
+
+	
+<!-- [[ site start-->
+        <tr ##ROWATTR##>
+          <td align="right"><font size="-1"><font size="-1">##SITENUM##</td>
+          <td><A HREF="##SITEURLWHO_L##">##SITEURLWHO_B##</A></td>
+          <td><A HREF="##SITEURL_L##">##SITEURL_B##</A></td>
+          <td align="right"><font size="-1">##SITECONNECT##</td>
+          <td align="right"><font size="-1">##SITEBYTES##</td>
+          <td align="right"><font size="-1">##SITEPERCENT##%</td>
+        </tr>
+<!-- ]] site end-->
+        <tr>
+          <th colspan="4">##MSG_TOTAL##</th>
+          <th align="right">##TOTAL##</th>
+        </tr>
+      </tbody>
+    </table>
+  </div></div></div>
+  <HR>
+  ##COPYRIGHT##
+    <div align="center"><a href="http://www.hipernetworks.net" target="_blank">Template by hipernetworks</a></div>
+</body>
+</html>

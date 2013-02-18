@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<!-- LightSquid TPL v1.7 -->
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Lightsquid interface</title>
+  ##META##
+  <link rel="stylesheet" href="tpl/base/css/bootstrap.min.css">
+  <style>
+    body {
+      padding-top: 60px;
+      padding-bottom: 40px;
+    }
+  </style>
+  <link rel="stylesheet" href="tpl/base/css/bootstrap-responsive.min.css">
+  <link rel="stylesheet" href="tpl/base/css/main.css">
+  <script src="tpl/base/js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
+</head>
+<body>
+  <div class="navbar navbar-inverse navbar-fixed-top">
+    <div class="navbar-inner">
+      <div class="container">
+        <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </a>
+        <a class="brand" href="index.cgi">Working period: ##WORKPERIOD##</a>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+  <div class="row">
+    <div class="span4">
+  <table class="table table-striped">
+    <tbody>
+      <tr><td colspan="12">##MSG_CALENDAR##</td></tr>
+      <!-- VARIABLE yearselected bgcolor="#FFD700" -->
+      <tr>
+      <!-- [[ year start-->
+        <td colspan="##YEARCOLSPAN##" ##YEARSELECTED##>
+          <div><a href="##YEARURL_L##">##YEARURL_B##</a><br></div>
+        </td>
+		  <!-- ]] year end-->
+      </tr>
+		  <!-- VARIABLE monTHselected bgcolor="#FFD700" -->
+      <tr>
+      <!-- [[ month start-->
+      <td ##MONTHSELECTED##><a href="##MONTHURL_L##">##MONTHURL_B##</a></td>
+		  <!-- ]] month end-->
+      </tr>
+    </tbody>
+    </table>
+  </div>
+  <div class="span8">
+    <table  class="table table-striped">
+      <tbody>
+        <tr>
+          <td>##MSG_TOP_SITES##</td>
+          <td>##MSG_TOTAL##</td>
+          <td>##MSG_GROUP##</td>
+        </tr>
+        <tr>
+          <td><a href="##TOP_YEAR_L##">##TOP_YEAR_B##</a></td>
+          <td><a href="##TOTAL_YEAR_L##">##TOTAL_YEAR_B##</a></td>
+          <td><a href="##GROUP_YEAR_L##">##GROUP_YEAR_B##</a></td>
+        </tr>
+        <tr>
+        <!-- HIDE monTHtop start -->
+        <td><a href="##TOP_MONTH_L##">##TOP_MONTH_B##</a></td>
+        <td>
+          <a href="##TOTAL_MONTH_L##">##TOTAL_MONTH_B##</a> 
+          <!-- HIDE graph start -->
+		      <a href="##MONTH_GRAPH_L##"><img src="get.cgi?png=graph" border="0" title="Graph Report"></a>
+		    <!-- HIDE graph end -->
+        </td>
+        <td><a href="##GROUP_MONTH_L##">##GROUP_MONTH_B##</td>
+		<!-- HIDE monTHtop end -->
+        </tr>
+      </tbody>
+    </table>
+</div></div></div>
+  <div class="container">
+    <div class="row">
+    <div class="span12">
+    <table class="table table-striped">
+      <tbody>
+       <tr>
+          <TH>##MSG_DATE##</TH>
+	  <!-- HIDE group start -->
+          <TH>##MSG_GROUP##</TH>
+	  <!-- HIDE group end -->
+          <TH>##MSG_USERS##</TH>
+	  <!-- HIDE oversize start -->
+          <TH>##MSG_OVERSIZE##</TH>
+	  <!-- HIDE oversize end -->
+          <TH>##MSG_BYTES##</TH>
+          <TH>##MSG_AVERAGE##</TH>
+          <TH>##MSG_HIT%##</TH>
+        </tr>
+	
+	<!-- VARIABLE oddattr bgcolor="beige" -->
+        <!-- VARIABLE evenattr  bgcolor="cornsilk" -->
+        <!-- VARIABLE sundayattr bgcolor="bisque" -->
+        <!-- VARIABLE saturdayattr bgcolor="#F0EFC7" -->
+        
+	<!-- [[ day start-->
+        <tr ##DAYATtr##>
+          <td align="center"><a href="##DAYDATE_L##">##DAYDATE_B##</a></td>
+	  <!-- HIDE group start -->
+          <td align="center"><a href="##DAYGROUP_L##">##DAYGROUP_B##</a></td>
+	  <!-- HIDE group end -->
+          <td align="center">##DAYUSERS##</td>
+	  
+	  <!-- HIDE oversize start-->
+          <td align="center"><a href="##DAYOVERUSERS_L##">##DAYOVERUSERS_B##</a></td>
+	  <!-- HIDE oversize end-->
+          <td align="right" nowrap="true">##DAYBYTES##</td>
+          <td align="right">##DAYAVERAGE##</td>
+          <td align="right">##DAYCACHEHIT##%</td>
+        </tr>
+	<!-- ]] day end-->
+
+        <tr bgcolor="blanchedalmond">
+          <td align="left">##MSG_TOTAL_AVERAGE##:</td>
+	  <!-- HIDE group start -->
+          <td>&nbsp</td>
+	  <!-- HIDE group end -->
+          <td align="center">##USERAVERAGE##</td>
+	  <!-- HIDE oversize start-->
+          <td align="center">##OVERUSERAVERAGE##</td>
+	  <!-- HIDE oversize end -->
+          <td align="right"><a href="##TOTAL_L##">##TOTAL_B##</a></td>
+          <td align="right">##TOTALAVERAGE##</td>
+          <td align="right">##AVERAGEHIT##%</td>
+        </tr>
+      </tbody>
+    </table>
+  </div></div></div>
+    <HR>
+    ##COPYRIGHT##
+    <div align="center"><a href="http://www.hipernetworks.net" target="_blank">Template by hipernetworks</a></div>
+  
+</BODY>
+</HTML>
